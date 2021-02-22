@@ -11,8 +11,8 @@
     <groupId>com.casuario</groupId>
     <artifactId>springmvcjwt</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>kelpie-api</name>
-    <description>pixelart tool API</description>
+    <name>springmvcjwt</name>
+    <description>spring mvc rest skeleton with jwt auth and signup</description>
     <properties>
         <java.version>15</java.version>
     </properties>
