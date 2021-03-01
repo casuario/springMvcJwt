@@ -28,9 +28,11 @@ public class AppUserController {
     public ResponseEntity<?> signUp(@RequestBody SignUpDto dto) {
         var response = new HashMap<String, Object>();
         Map<String, Object> errors = validator.validator(dto);
-        if (errors.size() > 0) return new ResponseEntity<>(errors, HttpStatus.BAD_REQUEST);
+        if (errors.size() > 0)
+            return new ResponseEntity<>(errors, HttpStatus.BAD_REQUEST);
         errors = authService.signUp(dto, errors);
-        if (errors.size() > 0) return new ResponseEntity<>(errors, HttpStatus.INTERNAL_SERVER_ERROR);
+        if (errors.size() > 0)
+            new ResponseEntity<>(errors, HttpStatus.NOT_FOUND);
         response.put("mensaje", "usuario creado con exito");
         return new ResponseEntity<>(response, HttpStatus.CREATED);
     }
